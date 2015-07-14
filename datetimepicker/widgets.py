@@ -22,5 +22,5 @@ class DateTimePicker(DateTimeInput):
 
     def render(self, name, value, attrs=None):
         template = get_template("datetimepicker/date-time-picker.html")
-        context = Context({'name': name, 'id': attrs['id'], 'params': self.params, 'format': self.format})
+        context = Context({'name': name, 'id': attrs['id'], 'params': self.params, 'format': self.format, 'value': value})
         return template.render(context)
